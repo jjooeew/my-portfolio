@@ -66,7 +66,7 @@ export default function AboutPage() {
 
           <article className="space-y-6 text-white/85 leading-relaxed">
             <p>
-              I'm Joe Walker, a full stack developer based in Auckland, New Zealand with a diploma in software development. My focus is on creating robust, scalable systems
+              I{"'"}m Joe Walker, a full stack developer based in Auckland, New Zealand with a diploma in software development. My focus is on creating robust, scalable systems
               with clean, maintainable code. Over the past four years I have developed everything from small business websites and mobile apps
               to complex data-driven platforms using modern frameworks and NoSQL databases.
             </p>

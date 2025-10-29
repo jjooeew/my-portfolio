@@ -1,7 +1,7 @@
 "use client";
 
-import type { Metadata } from "next";
-import { Inter, Rubik } from "next/font/google";
+// import type { Metadata } from "next";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { usePathname } from "next/navigation";

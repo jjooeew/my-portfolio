@@ -27,7 +27,7 @@ export default function Projects() {
               <li className="mb-5">
                 <p className="font-bold">- MERN + Firebase:</p>
                 It uses the MERN stack, while also integrating Firebase for
-                authentication and Firestore for user uploaded images, the URL's
+                authentication and Firestore for user uploaded images, the URL{"'"}s
                 of which are stored in MongoDB.
               </li>
               <li className="mb-5 flex flex-col">

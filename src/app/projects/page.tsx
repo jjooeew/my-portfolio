@@ -3,7 +3,7 @@
 import { Rubik } from "next/font/google";
 import ProjectDisplay from "../components/ProjectDisplay";
 import { projects } from "./projects.data";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const rubik = Rubik({
   subsets: ["latin"],

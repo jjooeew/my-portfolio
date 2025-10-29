@@ -15,7 +15,7 @@ export default function AboutPage() {
         <header className="flex flex-col mb-8 align-center">
           <h1 className="text-8xl self-center mb-5">About Me</h1>
           <p className="mt-2 text-white/70 max-w-2xl self-center text-center">
-            I’m Joe Walker, a full-stack developer based in Auckland, New Zealand.
+             I{"'"}m Joe Walker, a full stack developer based in Auckland, New Zealand with a diploma in software development. 
             I work with Next.js, Tailwind, React, React Native, TypeScript and dabble with others. 
             In the backend I work in SQL or NoSQL databases, RESTful APIs and am constantly learning
             new skills.
@@ -66,18 +66,18 @@ export default function AboutPage() {
 
           <article className="space-y-6 text-white/85 leading-relaxed">
             <p>
-              I{"'"}m Joe Walker, a full stack developer based in Auckland, New Zealand with a diploma in software development. My focus is on creating robust, scalable systems
+              My focus is on creating robust, scalable systems
               with clean, maintainable code. Over the past four years I have developed everything from small business websites and mobile apps
               to complex data-driven platforms using modern frameworks and NoSQL databases.
             </p>
             <p>
               I have worked in modern development methodologies (mainly agile) and have
               completed projects alone and as part of a team. I am goal oriented and constantly looking to improve and grow, in both software development and
-              life in general. I'm currently expanding my knowledge in AI-driven applications (you can check out an example on my projects page) to ensure that
+              life in general. I{"'"}m currently expanding my knowledge in AI-driven applications (you can check out an example on my projects page) to ensure that
               as the technology develops, so do I.
             </p>
             <p>
-              On the frontend I live in React/Next.js and Tailwind; on the backend I’m experienced with
+              On the frontend I live in React/Next.js and Tailwind; on the backend I{"’"}m experienced with
               Node/Express and SQL or NoSQL databases. I have a particular fondness for database work.
             </p>
 

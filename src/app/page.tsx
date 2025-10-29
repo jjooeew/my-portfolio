@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <main className="bg-black">
       <Header />
-      <AboutMe />
-      <Projects />
+      {/* <AboutMe />
+      <Projects /> */}
     </main>
   );
 }

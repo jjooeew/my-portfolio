@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 
 type ProjectCardProps = {
   title: string;
@@ -18,23 +19,42 @@ export default function ProjectDisplay({
   image,
 }: ProjectCardProps) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" >
-      <article className="flex flex-col gap-5 border-1 border-white rounded-lg p-3 w-full">
-        <header>
-          <h2 className="text-3xl pb-1">{title}</h2>
-          <ul className="flex gap-2 text-gray-300">
-            {tags.map((t) => (
-              <li key={t} className="">
-                {t} |
-              </li>
-            ))}
-          </ul>
-        </header>
-        <div className="">{description}</div>
-        <a href={repo} target="_blank" rel="noopener noreferrer" >
-            <p>GitHub Repo</p>
+    <motion.article
+      className="flex flex-col gap-5 border-1 border-white rounded-lg p-3 w-full"
+      whileHover={{ y: -4 }}
+      // initial={{ opacity: 0, y: -15 }}
+      // animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 500, damping: 40 }}
+    >
+      <header>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+          <h2 className="text-3xl inline pl-2">{title}</h2>
         </a>
-      </article>
-    </a>
+
+        <ul className="flex gap-2">
+          {tags.map((t) => (
+            <li key={t} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80 mt-2">
+              {t}
+            </li>
+          ))}
+        </ul>
+      </header>
+
+      <div className="pl-2">{description}</div>
+
+      <a
+        href={repo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="pl-2 text-sm text-white/80 hover:underline"
+      >
+        <p>GitHub Repo</p>
+      </a>
+    </motion.article>
   );
 }

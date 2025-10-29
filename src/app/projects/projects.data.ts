@@ -1,6 +1,3 @@
-
-
-
 export type Project = {
   title: string;
   description: string;
@@ -16,11 +13,11 @@ export const projects: Project[] = [
     description:
       "Personal developer site built with Next.js (App Router), Tailwind v4, and Framer Motion.",
     tags: ["Next.js", "Tailwind v4", "Framer Motion"],
-    href: "https://example.com",
-    repo: "https://github.com/you/portfolio",
+    href: "http://localhost:3000/",
+    repo: "https://github.com/jjooeew/my-portfolio.git",
     image: "/images/portfolio-cover.jpg",
   },
-    {
+  {
     title: "AI Job Board",
     description:
       "Typed job board with Drizzle ORM, Postgres, background jobs, and edge caching.",
@@ -33,6 +30,13 @@ export const projects: Project[] = [
     description:
       "MERN + Firebase Auth + RN mobile client. Country/activity catalogs and role-based access.",
     tags: ["MongoDB", "Firebase Auth", "React Native"],
-    repo: "https://github.com/jjooeew/Pasifika_Travel_Hub.git"
+    repo: "https://github.com/jjooeew/Pasifika_Travel_Hub.git",
   },
-]
+  {
+    title: "Toy Library Mobile App",
+    description:
+      "React Native + Expo SDK 54 mobile application, implements global context to manage products and cart.",
+    tags: ["React Native", "Expo", "Stack Navigation", "Advanced React hooks"],
+    repo: "https://github.com/jjooeew/ToyLibraryApp.git",
+  },
+];

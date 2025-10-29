@@ -15,7 +15,7 @@ export default function Header() {
     >
       <div className="flex flex-col gap-5">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="typewriter text-8xl font-extrabold text-emerald-400">
+          <h1 className="typewriter text-8xl font-extrabold text-emerald-400 drop-shadow-[0_0_11px_rgba(16,185,129,0.8)]">
             Hello World
           </h1>
           <h1 className="text-3xl">Welcome to My Portfolio</h1>
@@ -29,7 +29,7 @@ export default function Header() {
             <FolderGit2 className="w-40 h-40"/>
             <p className="text-2xl">Projects</p>
         </Link>
-        <Link href="#" className="hover:text-gray-300 transition w-1/3 flex flex-col items-center">
+        <Link href="/about" className="hover:text-gray-300 transition w-1/3 flex flex-col items-center hover:drop-shadow-drop-shadow-[0_0_25px_rgba(16,185,129,0.8)]" >
           <UserRound className="w-40 h-40"/>
           <p className="text-2xl">About Me</p>
         </Link>

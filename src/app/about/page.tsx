@@ -41,6 +41,7 @@ export default function AboutPage() {
               </a>
               <a
                 href="/MyCV.pdf"
+                target="_blank"
                 className="rounded-md border border-white/15 px-3 py-2 text-center text-sm hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
               >
                 Download CV

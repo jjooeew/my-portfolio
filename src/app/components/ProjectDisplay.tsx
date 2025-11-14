@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Modal } from "./Modal";
 
 type ProjectCardProps = {
   title: string;
@@ -17,6 +19,13 @@ export default function ProjectDisplay({
   href,
   repo,
 }: ProjectCardProps) {
+
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
   return (
     <motion.article
       className="flex flex-col gap-5 border-1 border-white rounded-lg p-3 w-full"
@@ -37,7 +46,10 @@ export default function ProjectDisplay({
 
         <ul className="flex gap-2">
           {tags.map((t) => (
-            <li key={t} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80 mt-2">
+            <li
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80 mt-2"
+            >
               {t}
             </li>
           ))}
@@ -45,15 +57,27 @@ export default function ProjectDisplay({
       </header>
 
       <div className="pl-2">{description}</div>
+      <div className="flex justify-between">
+        <a
+          href={repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pl-2 text-sm text-white/80 hover:underline"
+        >
+          <p>GitHub Repo</p>
+        </a>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-red-500 h-6 w-28  rounded-lg"
+          onClick={() => (modalOpen ? close() : open())}
+        >
+          See more
+        </motion.button>
 
-      <a
-        href={repo}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="pl-2 text-sm text-white/80 hover:underline"
-      >
-        <p>GitHub Repo</p>
-      </a>
+        {modalOpen && <Modal text={"Filler Text"} handleClose={close} />}
+
+      </div>
     </motion.article>
   );
 }

@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: "Pasifika Tourism Hub",
     description:
       "MERN + Firebase Auth + RN mobile client. Country/activity catalogs and role-based access.",
-    tags: ["MongoDB", "Firebase Auth", "React Native"],
+    tags: ["MongoDB", "Firebase Auth", "Firestore", "React Native", "React"],
     repo: "https://github.com/jjooeew/Pasifika_Travel_Hub.git",
   },
   {

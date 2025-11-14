@@ -81,17 +81,6 @@ export default function AboutPage() {
               On the frontend I live in React/Next.js and Tailwind; on the backend I{"’"}m experienced with
               Node/Express and SQL or NoSQL databases. I have a particular fondness for database work.
             </p>
-
-            <div className="grid grid-cols-2 gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div>
-                <div className="text-2xl font-semibold">3+</div>
-                <div className="text-sm text-white/60">Active projects</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold">100%</div>
-                <div className="text-sm text-white/60">Dark mode enjoyer</div>
-              </div>
-            </div>
           </article>
         </div>
       </section>

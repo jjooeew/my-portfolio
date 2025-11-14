@@ -14,9 +14,9 @@ const rubik = Rubik({
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const isProjects = pathname === "/projects";
-  const isAbout = pathname === "/about";
+  // const isHome = pathname === "/";
+  // const isProjects = pathname === "/projects";
+  // const isAbout = pathname === "/about";
 
   const navLinks: Record<
     string,

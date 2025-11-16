@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`${rubik.className} sticky top-0 z-50 w-full h-24 bg-black text-white flex items-center justify-between p-8 pt-12`}
+      className={`${rubik.className} sticky top-0 z-50 w-full h-24 bg-black/60 backdrop-blur-md text-white flex items-center justify-between p-8 pt-12`}
     >
       <motion.div
         className="flex items-center"

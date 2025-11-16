@@ -4,7 +4,7 @@ export type Project = {
   tags: string[];
   href?: string;
   repo?: string;
-  image?: string;
+  images?: string[];
 };
 
 export const projects: Project[] = [
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Tailwind v4", "Framer Motion"],
     href: "http://localhost:3000/",
     repo: "https://github.com/jjooeew/my-portfolio.git",
-    image: "/images/portfolio-cover.jpg",
+    images: ["/images/melting-smiley.png", "/images/ma-n-pa.jpg"],
   },
   {
     title: "AI Job Board",

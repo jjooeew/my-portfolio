@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { Backdrop } from "../Backdrop"
 import { createPortal } from "react-dom";
+import { ReactNode } from "react";
 
 const dropIn: Variants = {
     hidden: {
@@ -27,11 +28,12 @@ const dropIn: Variants = {
 
 type ModalProps = {
     handleClose: () => void;
-    text: string;
+    text?: string;
+    children: ReactNode
 }
 
 export const Modal = ({ 
-    handleClose, text 
+    handleClose, text, children 
 }: ModalProps) => {
     return createPortal(
         <Backdrop onClick={handleClose}>
@@ -43,7 +45,7 @@ export const Modal = ({
                 animate="visible"
                 exit="exit"
             >
-                <p>{text}</p>
+                {children}
                 <button onClick={handleClose}>Close</button>
             </motion.div>
         </Backdrop>, document.body

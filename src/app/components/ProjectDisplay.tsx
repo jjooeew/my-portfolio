@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Modal } from "./Modal";
+import ProjectDetail from "./ProjectDetail";
 
 type ProjectCardProps = {
   title: string;
@@ -9,7 +10,7 @@ type ProjectCardProps = {
   tags?: string[];
   href?: string; // Live/demo link
   repo?: string; // GitHub link
-  image?: string; // Optional cover image (public/…)
+  images?: string[]; // Optional cover image (public/…)
 };
 
 export default function ProjectDisplay({
@@ -18,6 +19,7 @@ export default function ProjectDisplay({
   tags = [],
   href,
   repo,
+  images,
 }: ProjectCardProps) {
 
 
@@ -75,7 +77,9 @@ export default function ProjectDisplay({
           See more
         </motion.button>
 
-        {modalOpen && <Modal text={"Filler Text"} handleClose={close} />}
+        {modalOpen && <Modal text={"Filler Text"} handleClose={close}>
+          <ProjectDetail title={title} images={images} />
+        </Modal>}
 
       </div>
     </motion.article>

@@ -5,6 +5,7 @@ export type Project = {
   href?: string;
   repo?: string;
   images?: string[];
+  category?: string[];
 };
 
 export const projects: Project[] = [
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     href: "http://localhost:3000/",
     repo: "https://github.com/jjooeew/my-portfolio.git",
     images: ["/images/melting-smiley.png", "/images/ma-n-pa.jpg"],
+    category: ["Web"]
   },
   {
     title: "AI Job Board",
@@ -23,7 +25,8 @@ export const projects: Project[] = [
       "Typed job board with Drizzle ORM, Postgres, background jobs, and edge caching.",
     tags: ["Next.js", "Postgres", "Drizzle", "Inngest"],
     repo: "https://github.com/jjooeew/AI-Job-Board.git",
-    image: "/images/jobboard-cover.jpg",
+    images: ["/images/jobboard-cover.jpg"],
+    category: ["Web"]
   },
   {
     title: "Pasifika Tourism Hub",
@@ -31,6 +34,7 @@ export const projects: Project[] = [
       "MERN + Firebase Auth + RN mobile client. Country/activity catalogs and role-based access.",
     tags: ["MongoDB", "Firebase Auth", "Firestore", "React Native", "React"],
     repo: "https://github.com/jjooeew/Pasifika_Travel_Hub.git",
+    category: ["Web", "Mobile"]
   },
   {
     title: "Toy Library Mobile App",
@@ -38,5 +42,6 @@ export const projects: Project[] = [
       "React Native + Expo SDK 54 mobile application, implements global context to manage products and cart.",
     tags: ["React Native", "Expo", "Stack Navigation", "Advanced React hooks"],
     repo: "https://github.com/jjooeew/ToyLibraryApp.git",
+    category: ["Mobile"]
   },
 ];

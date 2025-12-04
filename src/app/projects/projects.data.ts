@@ -4,7 +4,8 @@ export type Project = {
   tags: string[];
   href?: string;
   repo?: string;
-  image?: string;
+  images?: string[];
+  category?: string[];
 };
 
 export const projects: Project[] = [
@@ -15,7 +16,8 @@ export const projects: Project[] = [
     tags: ["Next.js", "Tailwind v4", "Framer Motion"],
     href: "http://localhost:3000/",
     repo: "https://github.com/jjooeew/my-portfolio.git",
-    image: "/images/portfolio-cover.jpg",
+    images: ["/images/melting-smiley.png", "/images/ma-n-pa.jpg"],
+    category: ["Web"]
   },
   {
     title: "AI Job Board",
@@ -23,14 +25,16 @@ export const projects: Project[] = [
       "Typed job board with Drizzle ORM, Postgres, background jobs, and edge caching.",
     tags: ["Next.js", "Postgres", "Drizzle", "Inngest"],
     repo: "https://github.com/jjooeew/AI-Job-Board.git",
-    image: "/images/jobboard-cover.jpg",
+    images: ["/images/jobboard-cover.jpg"],
+    category: ["Web"]
   },
   {
     title: "Pasifika Tourism Hub",
     description:
       "MERN + Firebase Auth + RN mobile client. Country/activity catalogs and role-based access.",
-    tags: ["MongoDB", "Firebase Auth", "React Native"],
+    tags: ["MongoDB", "Firebase Auth", "Firestore", "React Native", "React"],
     repo: "https://github.com/jjooeew/Pasifika_Travel_Hub.git",
+    category: ["Web", "Mobile"]
   },
   {
     title: "Toy Library Mobile App",
@@ -38,5 +42,6 @@ export const projects: Project[] = [
       "React Native + Expo SDK 54 mobile application, implements global context to manage products and cart.",
     tags: ["React Native", "Expo", "Stack Navigation", "Advanced React hooks"],
     repo: "https://github.com/jjooeew/ToyLibraryApp.git",
+    category: ["Mobile"]
   },
 ];

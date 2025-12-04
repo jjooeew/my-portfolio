@@ -1,100 +1,148 @@
-import { Rubik } from "next/font/google";
+import { Github, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = { title: "About Me" };
 
-
-const rubik = Rubik({
-  subsets: ['latin'],
-  // variable: "--font-inter"
-})
-
 export default function AboutPage() {
+  const SKILLS = [
+    {
+      category: "Languages",
+      items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML/CSS", "PHP"],
+    },
+    {
+      category: "Frameworks",
+      items: [
+        "React",
+        "Next.js",
+        "React Native",
+        "Framer Motion",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      category: "Tools",
+      items: ["Git", "Figma", "Vercel", "Expo", "Wordpress"],
+    },
+    {
+      category: "Databases",
+      items: ["MySQL", "MongoDB", "Firebase", "Firestore"],
+    },
+    { category: "Workflows", items: ["Agile", "Scrum"] },
+  ];
+
   return (
-    <main className={`${rubik.className} min-h-dvh bg-black text-white`}>
-      <section className="px-4 pb-20 pt-12">
-        <header className="flex flex-col mb-8 align-center">
-          <h1 className="text-8xl self-center mb-5">About Me</h1>
-          <p className="mt-2 text-white/70 max-w-2xl self-center text-center">
-             I{"'"}m Joe Walker, a full stack developer based in Auckland, New Zealand with a diploma in software development. 
-            I work with Next.js, Tailwind, React, React Native, TypeScript and dabble with others. 
-            In the backend I work in SQL or NoSQL databases, RESTful APIs and am constantly learning
-            new skills.
-          </p>
-        </header>
-
-        <div className="grid gap-8 md:grid-cols-[280px_minmax(0,1fr)]">
-          <aside className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="h-20 w-20 rounded-full bg-white/10" />
-              <div>
-                <p className="text-lg font-semibold">Joe Walker</p>
-                <p className="text-white/60 text-sm">Full-stack Developer</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <a
-                href="/projects"
-                className="rounded-md bg-white/10 px-3 py-2 text-center text-sm hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
-              >
-                View Projects
-              </a>
-              <a
-                href="/MyCV.pdf"
-                target="_blank"
-                className="rounded-md border border-white/15 px-3 py-2 text-center text-sm hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
-              >
-                Download CV
-              </a>
-            </div>
-
-            <div>
-              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/60">
-                Core Stack
-              </h2>
-              <ul className="flex flex-wrap gap-2">
-                {["Next.js", "TypeScript", "Javascript", "React", "React Native", "Tailwind", "Framer Motion", "SQL", "MongoDB", "Firebase", "Python", "RESTful APIs"].map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80"
-                  >
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-
-          <article className="space-y-6 text-white/85 leading-relaxed">
-            <p>
-              My focus is on creating robust, scalable systems
-              with clean, maintainable code. Over the past four years I have developed everything from small business websites and mobile apps
-              to complex data-driven platforms using modern frameworks and NoSQL databases.
-            </p>
-            <p>
-              I have worked in modern development methodologies (mainly agile) and have
-              completed projects alone and as part of a team. I am goal oriented and constantly looking to improve and grow, in both software development and
-              life in general. I{"'"}m currently expanding my knowledge in AI-driven applications (you can check out an example on my projects page) to ensure that
-              as the technology develops, so do I.
-            </p>
-            <p>
-              On the frontend I live in React/Next.js and Tailwind; on the backend I{"’"}m experienced with
-              Node/Express and SQL or NoSQL databases. I have a particular fondness for database work.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div>
-                <div className="text-2xl font-semibold">3+</div>
-                <div className="text-sm text-white/60">Active projects</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold">100%</div>
-                <div className="text-sm text-white/60">Dark mode enjoyer</div>
-              </div>
-            </div>
-          </article>
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+      <div className="lg:col-span-4 space-y-8">
+        {/* Profile Image */}
+        <div className="aspect-[3/4] relative rounded-2xl overflow-hidden bg-gray-200 dark:bg-neutral-800 shadow-md">
+          <Image
+            src="https://picsum.photos/600/800"
+            alt="Portrait"
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+          />
         </div>
-      </section>
-    </main>
+
+        <div className="space-y-4">
+          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <MapPin size={18} className="text-accent-500" />
+            <span className="text-sm">Auckland, NZ</span>
+          </div>
+
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/jjooeew"
+              className="p-2 rounded-lg bg-gray-50 dark:bg-neutral-800 text-gray-600 dark:text-gray-400 hover:text-accent-500 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-all"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content / Right Column */}
+      <div className="lg:col-span-8 space-y-16">
+        {/* Intro */}
+        <section className="space-y-6">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            About Me
+          </h1>
+          <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+            <p>{`
+                          I'm Joe, a full-stack engineer passionate about creating solutions
+              for individuals and businesses (and for myself). With 4+ years of
+              experience in both solo and group projects, I have worked on
+              everything from small, front-facing websites for tradies and small
+              businesses, to large-scale applications that require SQL and NoSQL
+              databases, tiered accessability and admin dashboards.
+            `}</p>
+            <p>{`
+              My philosophy is simple: user experience comes first. I strive to
+              write clean, maintainable code that powers interfaces feeling
+              instantaneous and natural. I'm currently obsessed with learning animation
+              libraries and understanding different ways to implement and harness AI.
+            `}</p>
+            {/* <p>{`
+              When I'm not coding, you can find me hiking the coast, brewing
+              specialty coffee, or tinkering with mechanical keyboards.
+            `}</p> */}
+          </div>
+        </section>
+
+        {/* Currently
+        <section className="border-t border-gray-100 dark:border-neutral-800 pt-10">
+          <h2 className="font-serif text-2xl font-medium mb-6 text-gray-900 dark:text-white">Currently</h2>
+          <ul className="space-y-3 text-gray-600 dark:text-gray-400 list-disc list-outside ml-4">
+             <li>Building high-performance dashboards at <strong className="text-gray-900 dark:text-gray-200 font-medium">TechCorp</strong></li>
+             <li>Exploring Rust and WebAssembly for image processing</li>
+             <li>Reading "The Design of Everyday Things" by Don Norman</li>
+          </ul>
+        </section> */}
+
+        {/* Skills */}
+        <section className="border-t border-gray-100 dark:border-neutral-800 pt-10">
+          <h2 className="font-serif text-2xl font-medium mb-8 text-gray-900 dark:text-white">
+            Skills & Tools
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {SKILLS.map((skillGroup) => (
+              <div key={skillGroup.category}>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">
+                  {skillGroup.category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {skillGroup.items.map((item) => (
+                    <span
+                      key={item}
+                      className="px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-md text-sm hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors cursor-default"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+
+        {/* Maybe make this part bring up a contact card modal */}
+        <section className="border-t border-gray-100 dark:border-neutral-800 pt-10 pb-10">
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 text-2xl font-serif font-medium text-gray-900 dark:text-white hover:text-accent-500 transition-colors"
+          >
+            Say hello
+            <Mail
+              size={24}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </a>
+          <p className="mt-2 text-gray-500">Open for work.</p>
+        </section>
+      </div>
+    </div>
   );
 }

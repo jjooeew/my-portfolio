@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-accent-500: #f43f5e;
+  --color-accent-600: #e11d48;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +28,7 @@
 } */
 
 
-@keyframes typing {
+/* @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
@@ -51,7 +53,7 @@
     0 0 20px #34d399,
     0 0 40px #10b981,
     0 0 80px #10b981;
-}
+} */
 
 /* @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
@@ -66,14 +68,14 @@
   animation: flicker 2s infinite;
 } */
 
-@keyframes floaty {
+/* @keyframes floaty {
   0% { transform: translateY(0) translateX(0) rotate(0deg); }
   50% { transform: translateY(-20px) translateX(10px) rotate(10deg); }
   100% { transform: translateY(0) translateX(0) rotate(0deg); }
 }
 @media (prefers-reduced-motion: reduce) {
   .motion-safe\:animate-floaty { animation: none !important; }
-}
+} */
 
 
 .backdrop {

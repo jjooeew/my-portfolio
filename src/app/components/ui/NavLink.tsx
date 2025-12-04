@@ -38,17 +38,17 @@ export default function NavLink({
         {id}
       </span>
 
-      <span
-        className={`
-         border-b-2 pb-0.5 transition-all
-          ${
-            isActive
-              ? "border-accent-500"
-              : "border-transparent group-hover:border-gray-300 dark:group-hover:border-gray-600"
-          }              
-            `}
-      >
+      <span className="relative pb-0.5">
         {label}
+        
+        <span
+          className={`
+            absolute left-0 -bottom-[2px] h-[2px]
+            bg-accent-500 origin-left
+            transition-all duration-300
+            ${isActive ? "w-full" : "w-0 group-hover:w-full"}
+            `}
+        />
       </span>
     </Link>
   );

@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import type { PropsWithChildren } from "react";
 
 type BackdropProps = PropsWithChildren<{
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 }>;
 
 export const Backdrop = ({
   children,
   onClick,
-}: Readonly<{ children: React.ReactNode; onClick: any }>) => {
+}: Readonly<BackdropProps>) => {
   return (
     <motion.div
       className="backdrop"

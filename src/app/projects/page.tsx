@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "./projects.data";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function ProjectsPage() {

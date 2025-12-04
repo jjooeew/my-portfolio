@@ -16,9 +16,9 @@ export default function ProjectCard({
   title,
   description,
   tags = [],
-  href,
+  // href,
   repo,
-  images,
+  // images,
   category = [],
 }: ProjectCardProps) {
 

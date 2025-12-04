@@ -1,28 +1,45 @@
 import { Github, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = { title: "About Me" };
 
 export default function AboutPage() {
-
-
-const SKILLS = [
-  { category: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'SQL', 'HTML/CSS', 'PHP'] },
-  { category: 'Frameworks', items: ['React', 'Next.js', 'React Native', 'Framer Motion', 'Tailwind CSS'] },
-  { category: 'Tools', items: ['Git', 'Figma', 'Vercel', 'Expo', 'Wordpress' ] },    
-  { category: 'Databases', items: ['MySQL', 'MongoDB', 'Firebase', 'Firestore'] },
-  { category: 'Workflows', items: ['Agile', 'Scrum',] }
-];
-
+  const SKILLS = [
+    {
+      category: "Languages",
+      items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML/CSS", "PHP"],
+    },
+    {
+      category: "Frameworks",
+      items: [
+        "React",
+        "Next.js",
+        "React Native",
+        "Framer Motion",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      category: "Tools",
+      items: ["Git", "Figma", "Vercel", "Expo", "Wordpress"],
+    },
+    {
+      category: "Databases",
+      items: ["MySQL", "MongoDB", "Firebase", "Firestore"],
+    },
+    { category: "Workflows", items: ["Agile", "Scrum"] },
+  ];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
       <div className="lg:col-span-4 space-y-8">
         {/* Profile Image */}
-        <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200 dark:bg-neutral-800 shadow-md">
-          <img
+        <div className="aspect-[3/4] relative rounded-2xl overflow-hidden bg-gray-200 dark:bg-neutral-800 shadow-md">
+          <Image
             src="https://picsum.photos/600/800"
             alt="Portrait"
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
           />
         </div>
 
@@ -52,24 +69,24 @@ const SKILLS = [
             About Me
           </h1>
           <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-            <p>
-              I'm Joe, a full-stack engineer passionate about creating solutions
+            <p>{`
+                          I'm Joe, a full-stack engineer passionate about creating solutions
               for individuals and businesses (and for myself). With 4+ years of
               experience in both solo and group projects, I have worked on
               everything from small, front-facing websites for tradies and small
               businesses, to large-scale applications that require SQL and NoSQL
               databases, tiered accessability and admin dashboards.
-            </p>
-            <p>
+            `}</p>
+            <p>{`
               My philosophy is simple: user experience comes first. I strive to
               write clean, maintainable code that powers interfaces feeling
-              instantaneous and natural. I'm currently obsessed with animation
-              libraries and server-side rendering.
-            </p>
-            <p>
+              instantaneous and natural. I'm currently obsessed with learning animation
+              libraries and understanding different ways to implement and harness AI.
+            `}</p>
+            {/* <p>{`
               When I'm not coding, you can find me hiking the coast, brewing
               specialty coffee, or tinkering with mechanical keyboards.
-            </p>
+            `}</p> */}
           </div>
         </section>
 
@@ -83,19 +100,21 @@ const SKILLS = [
           </ul>
         </section> */}
 
-
-
         {/* Skills */}
         <section className="border-t border-gray-100 dark:border-neutral-800 pt-10">
-          <h2 className="font-serif text-2xl font-medium mb-8 text-gray-900 dark:text-white">Skills & Tools</h2>
+          <h2 className="font-serif text-2xl font-medium mb-8 text-gray-900 dark:text-white">
+            Skills & Tools
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {SKILLS.map((skillGroup) => (
               <div key={skillGroup.category}>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">{skillGroup.category}</h3>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">
+                  {skillGroup.category}
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map(item => (
-                    <span 
-                      key={item} 
+                  {skillGroup.items.map((item) => (
+                    <span
+                      key={item}
                       className="px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-md text-sm hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors cursor-default"
                     >
                       {item}
@@ -111,16 +130,18 @@ const SKILLS = [
 
         {/* Maybe make this part bring up a contact card modal */}
         <section className="border-t border-gray-100 dark:border-neutral-800 pt-10 pb-10">
-           <a 
-             href="#" 
-             className="group inline-flex items-center gap-3 text-2xl font-serif font-medium text-gray-900 dark:text-white hover:text-accent-500 transition-colors"
-           >
-             Say hello
-             <Mail size={24} className="group-hover:translate-x-1 transition-transform" />
-           </a>
-           <p className="mt-2 text-gray-500">Open for work.</p>
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 text-2xl font-serif font-medium text-gray-900 dark:text-white hover:text-accent-500 transition-colors"
+          >
+            Say hello
+            <Mail
+              size={24}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </a>
+          <p className="mt-2 text-gray-500">Open for work.</p>
         </section>
-
       </div>
     </div>
   );

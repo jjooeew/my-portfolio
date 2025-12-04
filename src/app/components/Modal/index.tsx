@@ -33,7 +33,7 @@ type ModalProps = {
 }
 
 export const Modal = ({ 
-    handleClose, text, children 
+    handleClose, children 
 }: ModalProps) => {
     return createPortal(
         <Backdrop onClick={handleClose}>

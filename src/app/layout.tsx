@@ -1,6 +1,6 @@
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],

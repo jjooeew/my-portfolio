@@ -8,7 +8,7 @@ type ProjectCardProps = {
   tags?: string[];
   href?: string; // Live/demo link
   repo?: string; // GitHub link
-  images?: string[]; // Optional cover image (public/…)
+  images: [string, ...string[]]; // Optional cover image (public/…)
   category?: string[];
 };
 
@@ -18,7 +18,7 @@ export default function ProjectCard({
   tags = [],
   // href,
   repo,
-  // images,
+  images,
   category = [],
 }: ProjectCardProps) {
 
@@ -27,12 +27,12 @@ export default function ProjectCard({
     <div className="group relative bg-white dark:bg-neutral-800 rounded-xl overflow-hidden border border-gray-100 dark:border-neutral-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
       {/* Image */}
       <div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-neutral-900 relative">
-        {/* <img
-          src={images[]}
+        <img
+          src={images[0]}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
-        /> */}
+        />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 dark:group-hover:bg-white/5 transition-colors duration-300" />
       </div>
 

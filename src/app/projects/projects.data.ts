@@ -13,11 +13,11 @@ export const projects: Project[] = [
     title: "Portfolio Site",
     description:
       "Personal developer site built with Next.js (App Router), Tailwind v4, and Framer Motion.",
-    tags: ["Next.js", "Tailwind v4", "Framer Motion"],
-    href: "http://localhost:3000/",
+    tags: ["Next.js", "Tailwind v4", "Framer Motion", "Responsive Design"],
+    href: "https://joewalker.vercel.app",
     repo: "https://github.com/jjooeew/my-portfolio.git",
     images: ["/images/project_portfolio.jpg"],
-    category: ["Web"]
+    category: ["Web"],
   },
   // {
   //   title: "AI Job Board",
@@ -43,6 +43,16 @@ export const projects: Project[] = [
     tags: ["React Native", "Expo", "Stack Navigation", "Advanced React Hooks"],
     images: ["/images/project_toyapp.jpg"],
     repo: "https://github.com/jjooeew/ToyLibraryApp.git",
-    category: ["Mobile"]
+    category: ["Mobile"],
   },
+{
+    title: "Iron Kadin | Personal Trainer Site",
+    description:
+      "High-performance coaching platform featuring a multi-step diagnostic application system, complex state management, and a premium dark-mode aesthetic.",
+    tags: ["Next.js", "Tailwind v4", "Complex State", "Responsive Design"],
+    href: "ironkadin.vercel.app",
+    images: ["/images/project_iron-kadin.png"],
+    repo: "https://ironkadin.vercel.app",
+    category: ["Web"],
+},
 ];

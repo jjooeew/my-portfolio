@@ -12,11 +12,11 @@ export default function Home() {
           </span>
 
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-            I build web and mobile experiences.
+            I Build Websites and Apps.
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            Full-stack developer specialising in React, React Native, and both
+            Full-stack developer specialising in React, React Native, Next.js, and both
             SQL and NoSQL databases. I focus on accessibility, performance, and
             crafting polished user interfaces.
           </p>

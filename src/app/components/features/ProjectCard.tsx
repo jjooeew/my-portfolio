@@ -1,23 +1,31 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 type ProjectCardProps = {
+  id: string;
   title: string;
   description: string;
   tags?: string[];
-  href?: string; // Live/demo link
-  repo?: string; // GitHub link
+  // href?: string; // Live/demo link
+  // repo?: string; // GitHub link
+  links: {
+    demo?: string;
+    code?: string;
+  };
   images: [string, ...string[]]; // Optional cover image (public/…)
   category?: string[];
 };
 
 export default function ProjectCard({
+  id,
   title,
   description,
   tags = [],
   // href,
-  repo,
+  // repo,
+  links,
   images,
   category = [],
 }: ProjectCardProps) {
@@ -26,15 +34,15 @@ export default function ProjectCard({
   return (
     <div className="group relative bg-white dark:bg-neutral-800 rounded-xl overflow-hidden border border-gray-100 dark:border-neutral-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
       {/* Image */}
-      <div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-neutral-900 relative">
+      <Link href={`/projects/${id.toLowerCase().replace(/\s+/g, '-')}`} className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-neutral-900 relative">
         <img
           src={images[0]}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className=" w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 dark:group-hover:bg-white/5 transition-colors duration-300" />
-      </div>
+      </Link>
 
         {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
@@ -49,10 +57,10 @@ export default function ProjectCard({
             </div>
 
             <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              {repo && (
+              {links && (
                 <a
-                  href={repo}
-                  target="_blank"
+                  href={`/projects/${id.toLowerCase().replace(/\s+/g, '-')}`}
+                  // target="_blank"
                   rel="noreferrer"
                   className="text-gray-400 hover:text-accent-500"
                   aria-label="View Live"
